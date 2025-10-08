@@ -108,14 +108,14 @@
 }
 .pt-bracket::before {
   left: 0;
-  background-image: url(/img/math-symbols/bracket_round_left.svg);
+  background-image: url(../../img/math-symbols/bracket_round_left.svg);
 }
 .pt-bracket::after {
   right: 0;
-  background-image: url(/img/math-symbols/bracket_round_right.svg);
+  background-image: url(../../img/math-symbols/bracket_round_right.svg);
 }
 .pt-bracket--system::before {
-  background-image: url(/img/math-symbols/bracket_system_left.svg);
+  background-image: url(../../img/math-symbols/bracket_system_left.svg);
 }
 .pt-bracket--system::after {
   display: none;
