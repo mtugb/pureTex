@@ -18,17 +18,17 @@
 
     &::before {
         left: 0;
-        background-image: url(../../img/math-symbols/bracket_round_left.svg);
+        background-image: url(../img/math-symbols/bracket_round_left.svg);
     }
 
     &::after {
         right: 0;
-        background-image: url(../../img/math-symbols/bracket_round_right.svg);
+        background-image: url(../img/math-symbols/bracket_round_right.svg);
     }
 
     &--system {
         &::before {
-            background-image: url(../../img/math-symbols/bracket_system_left.svg);
+            background-image: url(../img/math-symbols/bracket_system_left.svg);
         }
 
         &::after {
