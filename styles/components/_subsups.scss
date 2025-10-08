@@ -1,0 +1,20 @@
+.pt-sup {
+    display: inline-block;
+    transform: translateY(-.5em);
+    font-size: .7em;
+}
+
+.pt-sub {
+    display: inline-block;
+    transform: translateY(+.5em);
+    font-size: .7em;
+}
+
+
+// .pt-sub + .pt-sup {
+//     transform: translate(-.7em, -.5em);
+// }
+
+// .pt-sup + .pt-sub {
+//     transform: translate(-.7em, +.5em);
+// }

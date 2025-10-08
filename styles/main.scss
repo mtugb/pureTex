@@ -1,0 +1,79 @@
+@use './components/integral';
+@use './components/fraction';
+@use './components/sigma';
+@use './components/subsups';
+@use './components/brackets';
+@use './components/matrix';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    padding-bottom: 50vh;
+    background-color: rgb(28, 27, 39);
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.inner {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main {
+    border-left: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+    padding: 50px;
+    background-color: white;
+    counter-reset: usage-h-conter;
+}
+
+.hero {
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+h2 {
+    border-bottom: 2px solid rgb(181, 175, 248);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+h2:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+h3 {
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+h4 {
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.sample {
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-family: 'Noto Sans Math', sans-serif;
+}
+
+.usage {
+    &>h3 {
+        counter-increment: usage-h-conter;
+    }
+
+    &>h3::before {
+        content: counter(usage-h-conter) ". ";
+    }
+}

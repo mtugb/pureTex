@@ -1,0 +1,39 @@
+.pt-bracket {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding: 0 1em;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 1em;
+        background-repeat: none;
+        background-position: center;
+        background-size: 100% 100%;
+    }
+
+    &::before {
+        left: 0;
+        background-image: url(/img/math-symbols/bracket_round_left.svg);
+    }
+
+    &::after {
+        right: 0;
+        background-image: url(/img/math-symbols/bracket_round_right.svg);
+    }
+
+    &--system {
+        &::before {
+            background-image: url(/img/math-symbols/bracket_system_left.svg);
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+}

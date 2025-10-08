@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples | PureTex</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://fonts.cdnfonts.com/css/noto-sans-math" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="inner">
+            <div class="hero">
+                <h1>PureTex</h1>
+                <p>No Javascript Math library.</p>
+            </div>
+        </div>
+        <div class="inner">
+            <main>
+                <h2>Installation</h2>
+                <pre><code class="language-html">&lt;link rel="stylesheet" href="path/to/puretex.css"&gt;</code></pre>
+
+                <h2>Usage</h2>
+                <section class="usage">
+                    <h3>Integral</h3>
+                    <h4>HTML</h4>
+                    <pre><code class="language-html" id="pt_for_01"></code></pre>
+                    <h4>Result</h4>
+                    <div class="sample" data-sample-id="01">
+                        <div class="pt-integral">
+                            <div class="pt-integral__upper-limit">b</div>
+                            <div class="pt-integral__lower-limit">a</div>
+                            <div class="pt-integral__symbol"></div>
+                        </div>
+                        x + 3 dx
+                    </div>
+                </section>
+                <section class="usage">
+                    <h3>fraction</h3>
+                    <h4>HTML</h4>
+                    <pre><code class="language-html" id="pt_for_02"></code></pre>
+                    <h4>Result</h4>
+                    <div class="sample" data-sample-id="02">
+                        <div class="pt-fraction">
+                            <div class="pt-fraction__upper">b</div>
+                            <div class="pt-fraction__lower">a</div>
+                        </div>
+                    </div>
+                </section>
+                <section class="usage">
+                    <h3>Sigma</h3>
+                    <h4>HTML</h4>
+                    <pre><code class="language-html" id="pt_for_e9f883fd-297e-46e5-b088-6d6a03abb05a"></code></pre>
+                    <h4>Result</h4>
+                    <div class="sample" data-sample-id="e9f883fd-297e-46e5-b088-6d6a03abb05a">
+                        <div class="pt-sigma">
+                            <div class="pt-sigma__upper-limit">n</div>
+                            <div class="pt-sigma__lower-limit">i = 1</div>
+                            <div class="pt-sigma__symbol" aria-hidden="true"></div>
+                        </div>
+                        i<div class="pt-sup">3</div> + a<div class="pt-sub">i</div><div class="pt-sup">2</div>
+                    </div>
+                </section>
+                            
+                <section class="usage">
+                    <h3>Matrix</h3>
+                    <h4>HTML</h4>
+                    <pre><code class="language-html" id="pt_for_9d1a9014-7f8f-4f2b-ad70-c7b9d9146fbc"></code></pre>
+                    <h4>Result</h4>
+                    <div class="sample" data-sample-id="9d1a9014-7f8f-4f2b-ad70-c7b9d9146fbc">
+                        <div class="pt-bracket pt-bracket--round">
+                            <table class="pt-matrix">
+                                <tr><td>2</td><td>3</td></tr>
+                                <tr><td>2</td><td>3</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="usage">
+                    <h3>System</h3>
+                    <h4>HTML</h4>
+                    <pre><code class="language-html" id="pt_for_715ecc8f-0a69-4139-a40f-926a709a8e30"></code></pre>
+                    <h4>Result</h4>
+                    <div class="sample" data-sample-id="715ecc8f-0a69-4139-a40f-926a709a8e30">
+                        <div class="pt-bracket pt-bracket--system">
+                            x+2y=5<br>
+                            3x+y=7
+                        </div>
+                    </div>
+                </section>
+
+                <h2>Practical examples</h2>
+                <section class="usage">
+                    <h3>fraction & integral</h3>
+                    <h4>HTML</h4>
+                    <pre><code class="language-html" id="pt_for_03"></code></pre>
+                    <h4>Result</h4>
+                    <div class="sample" data-sample-id="03">
+                        <div class="pt-fraction">
+                            <div class="pt-fraction__upper">3</div>
+                            <div class="pt-fraction__lower">2</div>
+                        </div>
+                        +
+                        <div class="pt-fraction">
+                            <div class="pt-fraction__upper">7</div>
+                            <div class="pt-fraction__lower">2</div>
+                        </div>
+                        = 3 + 
+                        <div class="pt-integral">
+                            <div class="pt-integral__upper-limit">2</div>
+                            <div class="pt-integral__lower-limit">0</div>
+                            <div class="pt-integral__symbol"></div>
+                        </div>
+                        x dx
+                    </div>
+                </section>
+                <section class="usage">
+                    <h3>double integral</h3>
+                    <h4>HTML</h4>
+                    <pre><code class="language-html" id="pt_for_04"></code></pre>
+                    <h4>Result</h4>
+                    <div class="sample" data-sample-id="04">
+                        <div class="pt-integral">
+                            <div class="pt-integral__upper-limit">b</div>
+                            <div class="pt-integral__lower-limit">a</div>
+                            <div class="pt-integral__symbol"></div>
+                        </div>
+                        <div class="pt-integral ">
+                            <div class="pt-integral__upper-limit">β</div>
+                            <div class="pt-integral__lower-limit">α</div>
+                            <div class="pt-integral__symbol"></div>
+                        </div>
+                        x<div class="pt-sup">3</div> dxdy
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script>
+        const samples = document.getElementsByClassName('sample');
+        for (const sample of samples) {
+            const sampleId = sample.dataset.sampleId
+            const codeArea = document.getElementById('pt_for_' + sampleId);
+            const html = sample.innerHTML;
+            let rows = html.split('\n').filter(row => row !== '');
+            const rowSpaces = rows.map(row => row.match(/^( *)<\/?div/)?.[1]?.length ?? 100);
+            const defaultIndent = Math.min(...rowSpaces);
+            for (let i = 0; i < rows.length; i++) {
+                rows[i] = rows[i].substring(defaultIndent);
+            }
+            codeArea.textContent = rows.join("\n");
+        }
+    </script>
+</body>
+
+</html>

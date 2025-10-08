@@ -1,0 +1,30 @@
+.pt-integral {
+    display: inline-grid;
+    grid-template-columns: .8em auto;
+    grid-template-rows: .8em 2em .8em;
+    font-size: 1em;
+    column-gap: .3em;
+    vertical-align: middle;
+
+    &__upper-limit {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: .8em;
+    }
+
+    &__lower-limit {
+        grid-column: 2;
+        grid-row: 3;
+        font-size: .8em;
+        display: flex;
+        align-items: end;
+    }
+
+    &__symbol {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        background: url(../img/math-symbols/integral.svg) center / contain no-repeat;
+    }
+}
+
+

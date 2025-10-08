@@ -1,0 +1,201 @@
+.pt-integral {
+  display: inline-grid;
+  grid-template-columns: 0.8em auto;
+  grid-template-rows: 0.8em 2em 0.8em;
+  font-size: 1em;
+  -moz-column-gap: 0.3em;
+       column-gap: 0.3em;
+  vertical-align: middle;
+}
+.pt-integral__upper-limit {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 0.8em;
+}
+.pt-integral__lower-limit {
+  grid-column: 2;
+  grid-row: 3;
+  font-size: 0.8em;
+  display: flex;
+  align-items: end;
+}
+.pt-integral__symbol {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  background: url(../img/math-symbols/integral.svg) center/contain no-repeat;
+}
+
+.pt-fraction {
+  display: inline-grid;
+  grid-template-columns: max-content;
+  grid-template-rows: auto 0.06em auto;
+  vertical-align: middle;
+  font-size: 1em;
+  position: relative;
+}
+.pt-fraction::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #000;
+}
+.pt-fraction__upper, .pt-fraction__lower {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pt-fraction__upper {
+  grid-column: 1;
+  grid-row: 1;
+}
+.pt-fraction__lower {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.pt-sigma {
+  display: inline-grid;
+  grid-template-columns: 2.5em;
+  grid-template-rows: auto 2.5em auto;
+  vertical-align: middle;
+}
+.pt-sigma__upper-limit, .pt-sigma__lower-limit {
+  font-size: 0.8em;
+  text-align: center;
+}
+.pt-sigma__upper-limit {
+  grid-column: 1;
+  grid-row: 1;
+}
+.pt-sigma__lower-limit {
+  grid-column: 1;
+  grid-row: 3;
+}
+.pt-sigma__symbol {
+  grid-column: 1;
+  grid-row: 2;
+  background: url(../../img/math-symbols/sigma.svg) center/contain no-repeat;
+}
+
+.pt-sup {
+  display: inline-block;
+  transform: translateY(-0.5em);
+  font-size: 0.7em;
+}
+
+.pt-sub {
+  display: inline-block;
+  transform: translateY(0.5em);
+  font-size: 0.7em;
+}
+
+.pt-bracket {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding: 0 1em;
+}
+.pt-bracket::before, .pt-bracket::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1em;
+  background-repeat: none;
+  background-position: center;
+  background-size: 100% 100%;
+}
+.pt-bracket::before {
+  left: 0;
+  background-image: url(/img/math-symbols/bracket_round_left.svg);
+}
+.pt-bracket::after {
+  right: 0;
+  background-image: url(/img/math-symbols/bracket_round_right.svg);
+}
+.pt-bracket--system::before {
+  background-image: url(/img/math-symbols/bracket_system_left.svg);
+}
+.pt-bracket--system::after {
+  display: none;
+}
+
+.pt-matrix {
+  border-collapse: collapse;
+  font-size: 1em;
+}
+.pt-matrix td {
+  padding: 0.25em 0.5em;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  padding-bottom: 50vh;
+  background-color: rgb(28, 27, 39);
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.inner {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+main {
+  border-left: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+  padding: 50px;
+  background-color: white;
+  counter-reset: usage-h-conter;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+h2 {
+  border-bottom: 2px solid rgb(181, 175, 248);
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+h2:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+h3 {
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+h4 {
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.sample {
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-family: "Noto Sans Math", sans-serif;
+}
+
+.usage > h3 {
+  counter-increment: usage-h-conter;
+}
+.usage > h3::before {
+  content: counter(usage-h-conter) ". ";
+}/*# sourceMappingURL=main.css.map */
