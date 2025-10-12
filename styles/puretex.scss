@@ -4,3 +4,9 @@
 @use './components/subsups';
 @use './components/brackets';
 @use './components/matrix';
+@use './components/accents';
+
+
+.pt-darkmode .pt-symbol {
+    filter: invert(1);
+}

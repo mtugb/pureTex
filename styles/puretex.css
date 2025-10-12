@@ -102,7 +102,7 @@
   top: 0;
   bottom: 0;
   width: 1em;
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
 }
@@ -128,4 +128,40 @@
 .pt-matrix td {
   padding: 0.25em 0.5em;
   text-align: center;
+}
+
+.pt-accent {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.pt-accent::before {
+  content: "";
+  position: absolute;
+  height: 0.5em;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 0.5em;
+  top: -0.3em;
+  left: 0;
+  right: 0;
+}
+.pt-accent--dot::before {
+  background-image: url(../img/math-symbols/dot.svg?ver003);
+  background-size: 30% 0.2em;
+}
+.pt-accent--ddots::before {
+  background-image: url(../img/math-symbols/ddots.svg);
+  background-size: 70% 0.5em;
+}
+.pt-accent--dddots::before {
+  background-image: url(../img/math-symbols/dddots.svg?ver003);
+  background-size: 100% 0.5em;
+}
+.pt-accent--hat::before {
+  background-image: url(../img/math-symbols/hat.svg?ver003);
+}
+
+.pt-darkmode .pt-symbol {
+  filter: invert(1);
 }/*# sourceMappingURL=puretex.css.map */

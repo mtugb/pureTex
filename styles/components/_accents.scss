@@ -1,0 +1,39 @@
+.pt-accent {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+    &::before {
+        content: '';
+        // background-color: blue;
+        position: absolute;
+        // width: 1em;
+        height: .5em;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100% .5em;
+        top: -.3em;
+        left: 0;
+        right: 0;
+    }
+    
+    &--dot::before {
+        background-image: url(../img/math-symbols/dot.svg?ver003);
+        background-size: 30% .2em;
+    }
+    
+    &--ddots::before {
+        background-image: url(../img/math-symbols/ddots.svg);
+        background-size: 70% .5em;
+    }
+   
+    &--dddots::before {
+        background-image: url(../img/math-symbols/dddots.svg?ver003);
+        background-size: 100% .5em;
+    }
+
+
+    &--hat::before {
+        background-image: url(../img/math-symbols/hat.svg?ver003);
+    }
+}
