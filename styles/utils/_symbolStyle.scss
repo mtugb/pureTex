@@ -1,0 +1,9 @@
+@mixin symbolStyle($url, $mode) {
+    @if $mode == light {
+        background-color: var(--pt-symbol-color, #000);
+    }
+    @if $mode == dark {
+        background-color: var(--pt-symbol-color-darkmode, #fff);
+    }
+    mask: url($url) center / 100% 100% no-repeat;
+}

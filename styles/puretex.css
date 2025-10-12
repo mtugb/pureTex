@@ -22,7 +22,14 @@
 .pt-integral__symbol {
   grid-column: 1/2;
   grid-row: 1/4;
-  background: url(../img/math-symbols/integral.svg) center/contain no-repeat;
+  -webkit-mask: url(../img/math-symbols/integral.svg) center/contain no-repeat;
+          mask: url(../img/math-symbols/integral.svg) center/contain no-repeat;
+  background-color: black;
+}
+@media (prefers-color-scheme: dark) {
+  .pt-integral__symbol {
+    background-color: white;
+  }
 }
 
 .pt-fraction {
@@ -37,7 +44,12 @@
   content: "";
   grid-column: 1;
   grid-row: 2;
-  background-color: #000;
+  background-color: black;
+}
+@media (prefers-color-scheme: dark) {
+  .pt-fraction::before {
+    background-color: white;
+  }
 }
 .pt-fraction__upper, .pt-fraction__lower {
   font-size: 0.8em;
@@ -75,7 +87,14 @@
 .pt-sigma__symbol {
   grid-column: 1;
   grid-row: 2;
-  background: url(../img/math-symbols/sigma.svg) center/100% 100% no-repeat;
+  -webkit-mask: url(../img/math-symbols/sigma.svg) center/100% 100% no-repeat;
+          mask: url(../img/math-symbols/sigma.svg) center/100% 100% no-repeat;
+  background-color: black;
+}
+@media (prefers-color-scheme: dark) {
+  .pt-sigma__symbol {
+    background-color: white;
+  }
 }
 
 .pt-sup {
@@ -102,20 +121,32 @@
   top: 0;
   bottom: 0;
   width: 1em;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  background-color: black;
+}
+@media (prefers-color-scheme: dark) {
+  .pt-bracket::before, .pt-bracket::after {
+    background-color: white;
+  }
 }
 .pt-bracket::before {
   left: 0;
-  background-image: url(../img/math-symbols/bracket_round_left.svg);
+  -webkit-mask-image: url(../img/math-symbols/bracket_round_left.svg);
+          mask-image: url(../img/math-symbols/bracket_round_left.svg);
 }
 .pt-bracket::after {
   right: 0;
-  background-image: url(../img/math-symbols/bracket_round_right.svg);
+  -webkit-mask-image: url(../img/math-symbols/bracket_round_right.svg);
+          mask-image: url(../img/math-symbols/bracket_round_right.svg);
 }
 .pt-bracket--system::before {
-  background-image: url(../img/math-symbols/bracket_system_left.svg);
+  -webkit-mask-image: url(../img/math-symbols/bracket_system_left.svg);
+          mask-image: url(../img/math-symbols/bracket_system_left.svg);
 }
 .pt-bracket--system::after {
   display: none;
@@ -139,27 +170,43 @@
   content: "";
   position: absolute;
   height: 0.5em;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100% 0.5em;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: bottom;
+          mask-position: bottom;
+  -webkit-mask-size: 100% 0.5em;
+          mask-size: 100% 0.5em;
   top: -0.3em;
   left: 0;
   right: 0;
+  background-color: black;
+}
+@media (prefers-color-scheme: dark) {
+  .pt-accent::before {
+    background-color: white;
+  }
 }
 .pt-accent--dot::before {
-  background-image: url(../img/math-symbols/dot.svg?ver003);
-  background-size: 30% 0.2em;
+  -webkit-mask-image: url(../img/math-symbols/dot.svg?ver003);
+          mask-image: url(../img/math-symbols/dot.svg?ver003);
+  -webkit-mask-size: 30% 0.2em;
+          mask-size: 30% 0.2em;
 }
 .pt-accent--ddots::before {
-  background-image: url(../img/math-symbols/ddots.svg);
-  background-size: 70% 0.5em;
+  -webkit-mask-image: url(../img/math-symbols/ddots.svg);
+          mask-image: url(../img/math-symbols/ddots.svg);
+  -webkit-mask-size: 70% 0.5em;
+          mask-size: 70% 0.5em;
 }
 .pt-accent--dddots::before {
-  background-image: url(../img/math-symbols/dddots.svg?ver003);
-  background-size: 100% 0.5em;
+  -webkit-mask-image: url(../img/math-symbols/dddots.svg?ver003);
+          mask-image: url(../img/math-symbols/dddots.svg?ver003);
+  -webkit-mask-size: 100% 0.5em;
+          mask-size: 100% 0.5em;
 }
 .pt-accent--hat::before {
-  background-image: url(../img/math-symbols/hat.svg?ver003);
+  -webkit-mask-image: url(../img/math-symbols/hat.svg?ver003);
+          mask-image: url(../img/math-symbols/hat.svg?ver003);
 }
 
 .pt-darkmode .pt-symbol {

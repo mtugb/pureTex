@@ -10,7 +10,10 @@
         content: '';
         grid-column: 1;
         grid-row: 2;
-        background-color: #000;
+        background-color: black;
+        @media (prefers-color-scheme: dark) {
+            background-color: white;
+        }
     }
 
     &__upper, &__lower {

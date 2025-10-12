@@ -33,6 +33,8 @@
                 <pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mtugb/pureTex@v1.0.0/styles/puretex.css"&gt;</code></pre>
 
                 <h2>Usage</h2>
+                <p>You can use this library to display math expressions.</p>
+                <p>This is compatible with Darkmode.Try it! (automatically change)</p>
                 <section class="usage">
                     <h3>Integral</h3>
                     <h4>HTML</h4>
@@ -108,18 +110,20 @@
                         </div>
                     </div>
                 </section>
-               
+
                 <section class="usage">
                     <h3>System</h3>
                     <h4>HTML</h4>
                     <pre><code class="language-html" id="pt_for_e36ae9bc-33e3-44e5-b425-07ccbf1870a1"></code></pre>
                     <h4>Result</h4>
                     <div class="sample" data-sample-id="e36ae9bc-33e3-44e5-b425-07ccbf1870a1">
-                        S(x) = <div class="pt-accent">β<div class="pt-sub">1</div></div>
-                        <br><br><div class="pt-accent pt-accent--dot">x</div>
-                        <br><br><div class="pt-accent pt-accent--hat">β</div>
-                        <br><br><div class="pt-accent pt-accent--ddots">x</div>
-                        <br><br><div class="pt-accent pt-accent--dddots">x</div>
+                        <div class="pt-accent pt-accent--dot">x</div>
+                        <br><br>
+                        <div class="pt-accent pt-accent--hat">β</div>
+                        <br><br>
+                        <div class="pt-accent pt-accent--ddots">x</div>
+                        <br><br>
+                        <div class="pt-accent pt-accent--dddots">x</div>
                     </div>
                 </section>
 
@@ -186,16 +190,62 @@
         }
     </script>
     <style>
+        /* ===== Theme tokens ===== */
+        :root {
+            /* Light (デフォルト) */
+            --bg: #f6f7fb;
+            /* body 背景 */
+            --fg: #111;
+            /* 文字色 */
+            --panel-bg: #ffffff;
+            /* main 背景 */
+            --panel-border: #e7e7e7;
+            /* main 左右の線 */
+            --accent: rgb(181, 175, 248);
+            /* h2 下線のアクセント */
+            --card-border: #ccc;
+            /* .sample の枠線 */
+            --hero-fg: #111;
+            /* .hero の文字色 */
+        }
+
+        /* System dark に追従 */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: rgb(28, 27, 39);
+                --fg: #e6e6e6;
+                --panel-bg: #121219;
+                --panel-border: #2a2a36;
+                --accent: rgb(181, 175, 248);
+                --card-border: #3b3b4a;
+                --hero-fg: #ffffff;
+            }
+        }
+
+        /* 手動トグルしたいときは <html class="theme-dark"> を付与 */
+        .theme-dark {
+            --bg: rgb(28, 27, 39);
+            --fg: #e6e6e6;
+            --panel-bg: #121219;
+            --panel-border: #2a2a36;
+            --accent: rgb(181, 175, 248);
+            --card-border: #3b3b4a;
+            --hero-fg: #ffffff;
+        }
+
+        /* ===== Reset ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* ===== Base ===== */
         body {
             font-size: 15px;
             padding-bottom: 50vh;
-            background-color: rgb(28, 27, 39);
+            background-color: var(--bg);
+            color: var(--fg);
         }
 
         .wrapper {
@@ -209,22 +259,25 @@
             margin: 0 auto;
         }
 
+        /* ===== Main panel ===== */
         main {
-            border-left: 1px solid #e7e7e7;
-            border-right: 1px solid #e7e7e7;
+            border-left: 1px solid var(--panel-border);
+            border-right: 1px solid var(--panel-border);
             padding: 50px;
-            background-color: white;
+            background-color: var(--panel-bg);
             counter-reset: usage-h-conter;
         }
 
+        /* ===== Hero ===== */
         .hero {
-            color: white;
+            color: var(--hero-fg);
             text-align: center;
             padding: 50px;
         }
 
+        /* ===== Headings ===== */
         h2 {
-            border-bottom: 2px solid rgb(181, 175, 248);
+            border-bottom: 2px solid var(--accent);
             padding-bottom: 8px;
             margin-bottom: 15px;
         }
@@ -243,12 +296,16 @@
             margin-top: 15px;
         }
 
+        /* ===== Samples ===== */
         .sample {
-            border: 1px solid #ccc;
+            border: 1px solid var(--card-border);
             padding: 20px;
             font-family: 'Noto Sans Math', sans-serif;
+            background: transparent;
+            /* 必要なら var(--panel-bg) に */
         }
 
+        /* ===== Usage counter ===== */
         .usage {
             &>h3 {
                 counter-increment: usage-h-conter;

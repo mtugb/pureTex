@@ -4,7 +4,8 @@
     grid-template-rows: auto 2.5em auto;
     vertical-align: middle;
 
-    &__upper-limit, &__lower-limit {
+    &__upper-limit,
+    &__lower-limit {
         font-size: .8em;
         text-align: center;
     }
@@ -13,7 +14,7 @@
         grid-column: 1;
         grid-row: 1;
     }
-   
+
     &__lower-limit {
         grid-column: 1;
         grid-row: 3;
@@ -22,6 +23,13 @@
     &__symbol {
         grid-column: 1;
         grid-row: 2;
-        background: url(../img/math-symbols/sigma.svg) center / 100% 100% no-repeat;
+        mask: url(../img/math-symbols/sigma.svg) center / 100% 100% no-repeat;
+        background-color: black;
+        @media (prefers-color-scheme: dark) {
+            background-color: white;
+        }
     }
 }
+
+
+.pt-sigma__symbol {}

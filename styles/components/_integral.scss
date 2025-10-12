@@ -23,7 +23,11 @@
     &__symbol {
         grid-column: 1 / 2;
         grid-row: 1 / 4;
-        background: url(../img/math-symbols/integral.svg) center / contain no-repeat;
+        mask: url(../img/math-symbols/integral.svg) center / contain no-repeat;
+        background-color: black;
+        @media (prefers-color-scheme: dark) {
+            background-color: white;
+        }
     }
 }
 
