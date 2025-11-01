@@ -5,13 +5,13 @@
     width: 1.2em;
     height: 1em;
     &--cdots {
-        mask: url(../../img/math-symbols/cdots.svg) center / contain no-repeat;
+        mask: url(../img/math-symbols/cdots.svg) center / contain no-repeat;
     }
     &--vdots {
-        mask: url(../../img/math-symbols/vdots.svg) center / contain no-repeat;
+        mask: url(../img/math-symbols/vdots.svg) center / contain no-repeat;
     }
     &--ddots {
-        mask: url(../../img/math-symbols/ddots.svg) center / 70% no-repeat;
+        mask: url(../img/math-symbols/ddots.svg) center / 70% no-repeat;
     }
     background-color: black;
     @media (prefers-color-scheme: dark) {
