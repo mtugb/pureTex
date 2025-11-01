@@ -12,13 +12,15 @@
         grid-column: 1;
         grid-row: 2;
         background-color: black;
+
         @media (prefers-color-scheme: dark) {
             background-color: white;
         }
     }
 
-    &__upper, &__lower {
-        font-size: .5em;
+    &__upper,
+    &__lower {
+        font-size: 1em; //this will changed if overlayed
         display: flex;
         justify-content: center;
         padding: 0 .2em;
@@ -37,4 +39,8 @@
         align-items: start;
         // border-top: 1px solid #000;
     }
+}
+
+.pt-fraction .pt-fraction {
+    font-size: .7em;
 }

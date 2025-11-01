@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 69">
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 227.09 227.09">
   <defs>
     <style>
       .cls-1 {
-        fill: #040000;
+        fill: #231815;
       }
     </style>
   </defs>
-  <circle class="cls-1" cx="34.5" cy="34.5" r="34.5"/>
-  <circle class="cls-1" cx="137.5" cy="34.5" r="34.5"/>
+  <circle class="cls-1" cx="207.59" cy="207.59" r="19.5"/>
+  <circle class="cls-1" cx="113.55" cy="113.55" r="19.5"/>
+  <circle class="cls-1" cx="19.5" cy="19.5" r="19.5"/>
 </svg>

@@ -52,7 +52,7 @@
   }
 }
 .pt-fraction__upper, .pt-fraction__lower {
-  font-size: 0.5em;
+  font-size: 1em;
   display: flex;
   justify-content: center;
   padding: 0 0.2em;
@@ -66,6 +66,10 @@
   grid-column: 1;
   grid-row: 3;
   align-items: start;
+}
+
+.pt-fraction .pt-fraction {
+  font-size: 0.7em;
 }
 
 .pt-sigma {
@@ -153,6 +157,21 @@
 .pt-bracket--system::after {
   display: none;
 }
+.pt-bracket--array::before {
+  -webkit-mask-image: url(../img/math-symbols/bracket_array_left.svg);
+          mask-image: url(../img/math-symbols/bracket_array_left.svg);
+}
+.pt-bracket--array::after {
+  -webkit-mask-image: url(../img/math-symbols/bracket_array_right.svg);
+          mask-image: url(../img/math-symbols/bracket_array_right.svg);
+}
+.pt-bracket__exponent {
+  position: absolute;
+  top: -0.5em;
+}
+.pt-bracket__exponent--right {
+  left: 100%;
+}
 
 .pt-matrix {
   border-collapse: collapse;
@@ -209,6 +228,52 @@
 .pt-accent--hat::before {
   -webkit-mask-image: url(../img/math-symbols/hat.svg?ver003);
           mask-image: url(../img/math-symbols/hat.svg?ver003);
+}
+
+.cdots {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateY(-0.1em);
+  width: 1.2em;
+  height: 1em;
+  -webkit-mask: url(../../img/math-symbols/cdots.svg) center/contain no-repeat;
+          mask: url(../../img/math-symbols/cdots.svg) center/contain no-repeat;
+  background-color: black;
+}
+@media (prefers-color-scheme: dark) {
+  .cdots {
+    background-color: white;
+  }
+}
+
+.vdots {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.2em;
+  height: 1em;
+  -webkit-mask: url(../../img/math-symbols/vdots.svg) center/contain no-repeat;
+          mask: url(../../img/math-symbols/vdots.svg) center/contain no-repeat;
+  background-color: black;
+}
+@media (prefers-color-scheme: dark) {
+  .vdots {
+    background-color: white;
+  }
+}
+
+.ddots {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.2em;
+  height: 1em;
+  -webkit-mask: url(../../img/math-symbols/ddots.svg) center/70% no-repeat;
+          mask: url(../../img/math-symbols/ddots.svg) center/70% no-repeat;
+  background-color: black;
+}
+@media (prefers-color-scheme: dark) {
+  .ddots {
+    background-color: white;
+  }
 }
 
 .pt-darkmode .pt-symbol {

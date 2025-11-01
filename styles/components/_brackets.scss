@@ -15,6 +15,7 @@
         mask-position: center;
         mask-size: 100% 100%;
         background-color: black;
+
         @media (prefers-color-scheme: dark) {
             background-color: white;
         }
@@ -37,6 +38,24 @@
 
         &::after {
             display: none;
+        }
+    }
+
+    &--array {
+        &::before {
+            mask-image: url(../img/math-symbols/bracket_array_left.svg);
+        }
+
+        &::after {
+            mask-image: url(../img/math-symbols/bracket_array_right.svg);
+        }
+    }
+
+    &__exponent {
+        position: absolute;
+        top: -.5em;
+        &--right {
+            left: 100%;
         }
     }
 
