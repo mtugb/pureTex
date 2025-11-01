@@ -230,48 +230,28 @@
           mask-image: url(../img/math-symbols/hat.svg?ver003);
 }
 
-.cdots {
+.pt-dots {
   display: inline-block;
   vertical-align: middle;
   transform: translateY(-0.1em);
   width: 1.2em;
   height: 1em;
+  background-color: black;
+}
+.pt-dots--cdots {
   -webkit-mask: url(../../img/math-symbols/cdots.svg) center/contain no-repeat;
           mask: url(../../img/math-symbols/cdots.svg) center/contain no-repeat;
-  background-color: black;
 }
-@media (prefers-color-scheme: dark) {
-  .cdots {
-    background-color: white;
-  }
-}
-
-.vdots {
-  display: inline-block;
-  vertical-align: middle;
-  width: 1.2em;
-  height: 1em;
+.pt-dots--vdots {
   -webkit-mask: url(../../img/math-symbols/vdots.svg) center/contain no-repeat;
           mask: url(../../img/math-symbols/vdots.svg) center/contain no-repeat;
-  background-color: black;
 }
-@media (prefers-color-scheme: dark) {
-  .vdots {
-    background-color: white;
-  }
-}
-
-.ddots {
-  display: inline-block;
-  vertical-align: middle;
-  width: 1.2em;
-  height: 1em;
+.pt-dots--ddots {
   -webkit-mask: url(../../img/math-symbols/ddots.svg) center/70% no-repeat;
           mask: url(../../img/math-symbols/ddots.svg) center/70% no-repeat;
-  background-color: black;
 }
 @media (prefers-color-scheme: dark) {
-  .ddots {
+  .pt-dots {
     background-color: white;
   }
 }

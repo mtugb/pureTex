@@ -1,34 +1,18 @@
-.cdots {
+.pt-dots {
     display: inline-block;
     vertical-align: middle;
     transform: translateY(-.1em);
     width: 1.2em;
     height: 1em;
-    mask: url(../../img/math-symbols/cdots.svg) center / contain no-repeat;
-    background-color: black;
-    @media (prefers-color-scheme: dark) {
-        background-color: white;
+    &--cdots {
+        mask: url(../../img/math-symbols/cdots.svg) center / contain no-repeat;
     }
-}
-.vdots {
-    display: inline-block;
-    vertical-align: middle;
-    // transform: translateY(-.1em);
-    width: 1.2em;
-    height: 1em;
-    mask: url(../../img/math-symbols/vdots.svg) center / contain no-repeat;
-    background-color: black;
-    @media (prefers-color-scheme: dark) {
-        background-color: white;
+    &--vdots {
+        mask: url(../../img/math-symbols/vdots.svg) center / contain no-repeat;
     }
-}
-.ddots {
-    display: inline-block;
-    vertical-align: middle;
-    // transform: translateY(-.1em);
-    width: 1.2em;
-    height: 1em;
-    mask: url(../../img/math-symbols/ddots.svg) center / 70% no-repeat;
+    &--ddots {
+        mask: url(../../img/math-symbols/ddots.svg) center / 70% no-repeat;
+    }
     background-color: black;
     @media (prefers-color-scheme: dark) {
         background-color: white;
